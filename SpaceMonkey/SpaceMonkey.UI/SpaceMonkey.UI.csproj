@@ -33,16 +33,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ed.Eto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoCommon.8.31.26126.13431\lib\net48\Ed.Eto.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto, Version=2.11.0.0, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoCommon.8.31.26126.13431\lib\net48\Eto.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto.Wpf, Version=2.11.0.0, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoWindows.8.31.26126.13431\lib\net48\Eto.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.0.0.2422, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.0.0\lib\net452\MaterialDesignColors.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignThemes.Wpf, Version=4.0.0.2422, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.4.0.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Rhino.UI, Version=8.31.26126.13431, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoCommon.8.31.26126.13431\lib\net48\Rhino.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoCommon, Version=8.31.26126.13431, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoCommon.8.31.26126.13431\lib\net48\RhinoCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoWindows, Version=8.31.26126.13431, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoWindows.8.31.26126.13431\lib\net48\RhinoWindows.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -98,5 +120,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('..\packages\RhinoCommon.8.31.26126.13431\build\net48\RhinoCommon.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RhinoCommon.8.31.26126.13431\build\net48\RhinoCommon.targets'))" />
+    <Error Condition="!Exists('..\packages\RhinoWindows.8.31.26126.13431\build\net48\RhinoWindows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RhinoWindows.8.31.26126.13431\build\net48\RhinoWindows.targets'))" />
   </Target>
+  <Import Project="..\packages\RhinoCommon.8.31.26126.13431\build\net48\RhinoCommon.targets" Condition="Exists('..\packages\RhinoCommon.8.31.26126.13431\build\net48\RhinoCommon.targets')" />
+  <Import Project="..\packages\RhinoWindows.8.31.26126.13431\build\net48\RhinoWindows.targets" Condition="Exists('..\packages\RhinoWindows.8.31.26126.13431\build\net48\RhinoWindows.targets')" />
 </Project>
